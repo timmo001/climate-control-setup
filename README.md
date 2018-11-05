@@ -29,8 +29,6 @@ TBD
 
 ## Links
 
-[Support / Discussion][forum]
-
 [Contribution Guidelines][CONTRIBUTING]
 
 [Code of Conduct][CODE_OF_CONDUCT]
