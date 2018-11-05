@@ -31,9 +31,15 @@ class Time extends Component {
     };
   }
 
-  handleNameChanged = e => this.setState({ name: e.target.value });
-  handleTimeFromChanged = date => this.setState({ timeFrom: date });
-  handleTimeToChanged = date => this.setState({ timeTo: date });
+handleChange = () => this.props.handleChange({
+  name: this.state.name,
+  timeFrom: this.state.timeFrom,
+  timeTo: this.state.timeTo
+});
+
+  handleNameChanged = e => this.setState({ name: e.target.value },()=>this.handleChange());
+  handleTimeFromChanged = date => this.setState({ timeFrom: date },()=>this.handleChange());
+  handleTimeToChanged = date => this.setState({ timeTo: date },()=>this.handleChange());
 
   render() {
     const { classes } = this.props;
